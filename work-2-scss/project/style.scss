@@ -1,0 +1,239 @@
+@import "./styles/variable.scss";
+@import "./styles/mixin.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+a{
+   text-decoration: none;
+   
+}
+#app{
+   font-family: 'Montserrat', sans-serif;
+   min-height: 100vh;
+   
+   // width: 1000px;
+   // justify-items: center;
+   // margin: auto;
+}
+
+.container{
+   width: 1000px;
+   justify-items: center;
+   margin: auto;
+
+}
+
+.header{
+   @include flex-between;
+   padding-top:  $padding-l;
+   align-items: center  ;
+}
+
+.logo-title{
+   font-weight: 600;
+   font-size: $fs-xl;
+   letter-spacing: 2px;
+}
+.nav{
+   width: 60%;
+   @include flex-between;
+
+
+   &-link{
+      font-weight: 600;
+      font-size: $fs-s;
+      color: $primary-text-color;
+   }
+}
+
+.main{
+   padding-top: $padding-xxxl;
+}
+
+.section-title{
+   text-align: center;
+   font-weight: 400;
+   font-size: $fs-xl;
+   
+   &__sub-wrapper{
+      width: 106px;
+      height: 38px;
+      background-color: #74917D;
+      display: flex; 
+      justify-content: center;
+      margin: auto;
+      margin-top: $padding-l;
+   }
+
+   &__sub{
+      font-size: $fs-s ;
+      font-weight: 400;
+      padding: 8px;
+      color: #fff;
+   }
+}
+
+.categories{
+   @include flex-between;
+   width: 60%;
+   margin: auto;
+   padding-top: $padding-l;
+
+   &-link{
+      color: $secondary-text-color;
+   }
+}
+
+.catalog{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   padding-top: $padding-xl;
+}
+
+.item{
+   &-title{
+      font-size: $fs-xs;
+      width: 210px;
+   }
+
+   &-info{
+      font-size: $fs-xxs;
+      color: $thrid-text-color;
+      padding-top: $padding-s;
+   }
+   &-sale-group{
+      @include flex-between;
+      width: 291px;
+      padding-top: $padding-s;
+   }
+
+   &-sale{
+      font-weight: 600;
+   }
+}
+
+.button{
+   background-color: #171717;
+   width: 95px;
+   height: 29px;
+   color: #fff;
+   font-size: $fs-xxs;
+   border: none;
+   cursor: pointer;
+}
+
+.footer{
+   background: #F3F3F3;
+   margin-top: 120px;
+   height: 449px;
+   width: 100%;
+   
+   &__container{
+      width: 1000px;
+      justify-items: center;
+      margin: auto;
+      padding-top: $padding-l;
+   }
+
+}
+
+.inform{
+   @include flex-between;
+   padding-top: $padding-xxl;
+}
+.contacts-title, .address-title, .email-title{
+   padding-bottom: 10px;
+}
+.contacts-info, .address-info, .email-info{
+   padding-top: 10px;
+}
+.privace{
+
+   padding-top: $padding-xxl;
+}
+
+   // -------TWO PAGE----------
+
+   .product{
+      @include flex-between;
+
+      &-info{
+
+         &__title{
+            font-size: 30px;
+            font-weight: 600;
+            margin: 0;
+         }
+
+         &__have{
+            display: flex;
+            padding-top: $padding-s;
+
+            &-nal{
+               color: $thrid-text-color;
+               margin: 0;
+            }
+            &-cod{
+               color: rgba(0, 0, 0, 0.37);
+               padding-left: $padding-xxl;
+               margin: 0;
+            }
+         }
+         &__button{
+            display: flex;
+            align-items: center;
+            padding-top: $padding-s;
+            
+            &-m{
+               font-size: 24px;
+               cursor: pointer;
+               margin: 0;
+            }
+            &-n{
+               font-size: $fs-xs;
+               padding: 0 10px;
+               margin: 0;
+            }
+            &-p{
+               font-size: 24px;
+               color:rgba(0, 0, 0, 0.57); 
+               cursor: pointer;
+               margin: 0;
+            }
+         }
+
+         &__sale{
+            font-size: $fs-l;
+            font-weight: 600;
+            padding-top: $padding-l;
+            margin: 0;
+         }
+
+         &__botton-buy{
+            background: #313131;
+            border: none;
+            padding: 13px 38px;
+            color: #fff;
+            margin-top: $padding-l ;
+         }
+
+         &__about{
+            margin: 0;
+            padding-top: $padding-l;
+            cursor: pointer;
+         }
+         &__line{
+            border-bottom:1px solid rgba(0, 0, 0, 0.37);
+            padding-top: $padding-s;
+            margin: 0;
+         }
+      }
+   }
+
+
